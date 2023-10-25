@@ -118,7 +118,7 @@ void fem_nrf21540_rx_enable(bool enable){
 //*******************************************************************************************
 
 void fem_nrf21540_antenna_sel(enum ant antenna){
-    if(antenna == ANTENNA_1){
+	if(antenna == ANTENNA_1){
         nrf_gpio_pin_clear(ANT_SEL_PIN);
     }else{
         nrf_gpio_pin_set(ANT_SEL_PIN);
@@ -128,7 +128,7 @@ void fem_nrf21540_antenna_sel(enum ant antenna){
 //*******************************************************************************************
 
 void fem_nrf21540_mode_sel(enum mode mode_){
-    if(mode_ == TX_GAIN_POUTA){
+	if(mode_ == TX_GAIN_POUTA){
         nrf_gpio_pin_clear(MODE_PIN);
     }else{
         nrf_gpio_pin_set(MODE_PIN);
@@ -139,7 +139,7 @@ void fem_nrf21540_mode_sel(enum mode mode_){
 
 bool fem_nrf21540_set_power(uint8_t power){
     
-    if(power <= 31){
+	if(power <= 31){
         int ret;
         nrf21540_tx_buff[0] = WRITE_REG | CONFREG0;
         nrf21540_tx_buff[1] = power << 2;
