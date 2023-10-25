@@ -2,7 +2,7 @@
 This is a simple custom driver for NRF21540 for use with Nordic Connect SDK. Because of the confusion I had to use the official
 Nordic FEM driver, I created a simpler version for me. You can use it with Nordic Connect SDK, but you must follow some configuring
 steps before.
-\\
+
 1. Add the following to device tree (or overlay) and change the pins if needed.
 ```
 &pinctrl {
