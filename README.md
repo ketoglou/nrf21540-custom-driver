@@ -60,6 +60,15 @@ target_include_directories(app PRIVATE inc)
 
 target_sources(app PRIVATE src/main.c src/fem_nrf21540.c inc/fem_nrf21540.h)
 ```
+4. Change the pins in .c file if needed
+```
+//NRF21540 PINS
+#define TX_EN_PIN       25
+#define RX_EN_PIN       19
+#define PDN_PIN         23
+#define ANT_SEL_PIN     20
+#define MODE_PIN        17
+```
 
 ## Example use
 ```
