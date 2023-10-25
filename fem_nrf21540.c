@@ -50,7 +50,7 @@ const struct spi_buf_set tx_buff = { spi_tx_buff, 1 };
 void fem_nrf21540_init(void){
 
     //Chip in power off state
-    nrf_gpio_cfg(PDN_PIN, NRF_GPIO_PIN_DIR_OUTPUT, NRF_GPIO_PIN_INPUT_DISCONNECT, NRF_GPIO_PIN_PULLDOWN, NRF_GPIO_PIN_S0S1, NRF_GPIO_PIN_NOSENSE);
+	nrf_gpio_cfg(PDN_PIN, NRF_GPIO_PIN_DIR_OUTPUT, NRF_GPIO_PIN_INPUT_DISCONNECT, NRF_GPIO_PIN_PULLDOWN, NRF_GPIO_PIN_S0S1, NRF_GPIO_PIN_NOSENSE);
 	nrf_gpio_pin_clear(PDN_PIN);
 
     //Disable TX

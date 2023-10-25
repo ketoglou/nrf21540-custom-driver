@@ -1,7 +1,7 @@
 # NRF21540 Custom Driver for Nordic Connect SDK
 This is a simple custom driver for NRF21540 for use with Nordic Connect SDK. Because of the confusion I had to use the official
 Nordic FEM driver, I created a simpler version for me. You can use it with Nordic Connect SDK, but you must follow some configuring
-steps before.\\
+steps before.
 \\
 1. Add the following to device tree (or overlay) and change the pins if needed.
 ```
@@ -59,6 +59,17 @@ CONFIG_PINCTRL=y
 target_include_directories(app PRIVATE inc)
 
 target_sources(app PRIVATE src/main.c src/fem_nrf21540.c inc/fem_nrf21540.h)
+```
+
+## Example use
+```
+...
+//Init FEM
+fem_nrf21540_init();
+fem_nrf21540_power_on(true);
+fem_nrf21540_set_power(31); //Max gain
+fem_nrf21540_tx_enable();
+...
 ```
 
 
